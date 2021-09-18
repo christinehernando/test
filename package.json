@@ -11,7 +11,7 @@
     "contributors:add": "all-contributors add",
     "hooks:pre-commit": "node hooks/pre-commit.js",
     "commit": "cz",
-    "deploy": "ng deploy --base-href=https://username.github.io/repo/",
+    "deploy": "ng deploy --base-href=https://github.com/ThereseHernando/test",
     "copy": "cpx README.md dist/scope/therese-lib",
     "build:lib": "ng build @scope/therese-lib --prod && npm run copy",
     "test:lib": "ng test @scope/therese-lib",
