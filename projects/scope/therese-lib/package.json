@@ -1,0 +1,35 @@
+{
+  "name": "@scope/therese-lib",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "keywords": [
+    "angular",
+    "angular 2",
+    "therese-lib"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ThereseHernando/test/issue"
+  },
+  "homepage": "https://github.com/ThereseHernando/test#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThereseHernando/test"
+  },
+  "schematics": "./schematics/collection.json",
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "copy:schemas": "cpx schematics/ng-add ../../../dist/scope/therese-lib/",
+    "copy:collection": "cpx schematics/collection.json ../../../dist/scope/therese-lib/schematics/",
+    "postbuild": "npm run copy:schemas && npm run copy:collection"
+  }
+}
